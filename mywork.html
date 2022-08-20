@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf7b2869d5.js" crossorigin="anonymous"></script>
+   <style>
+    #appwork{
+        background-color: rgb(2, 2, 2);
+    }
+    #webwork{
+        background-color: black;
+    }
+    .mywork1{
+        margin-left: 10%;
+    }
+    @media only screen and (max-width: 600px){
+        
+        .mywork-col-1, .mywork1{
+        flex-basis: 100%;
+        }
+       .mywork1 h1{
+        font-size: 13px;
+       }
+       .mywork-col-1 h1{
+        font-size: 13px;
+       }
+       .mywork-col-1, .mywork1 img{
+        flex-basis: 100%;
+        }
+    }
+   </style>
+</head>
+
+  
+
+<body>
+<section id="about">
+        <center><h1 class="sub-title">My Works</h1></center>
+
+        <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('web')">Web Development</p>
+                    <p class="tab-links" onclick="opentab('app')">App Development</p>
+        </div>
+            
+            <section id="webwork">  
+                <div class="tab-contents active-tab" id="web">
+               
+                    <div class="mywork1">
+                        <br>
+                        <h1>1. Nike Shoes Web Landing Page Interface</h1><br>
+                        <img src="images/work1.png" style="width:60%;">
+                    </div>
+                        <br>
+                        <br>
+                    <div class="mywork1">
+                        <h1>2. Bicycle Store Web Landing Page Interface</h1><br>
+                        <img src="images/work2.png" style="width:60%;"><br>
+                    </div>
+                        <br>
+                        <br>
+                    <div class="mywork1">
+                        <h1>3. Adidas shopping Web Landing Page Interface</h1><br>
+                        <img src="images/work3.png" style="width:60%;"><br>
+                    </div>
+                        <br>
+                        <br>
+                    <div class="mywork1">
+                        <h1>4. Sunglasses Web Landing Page Interface</h1><br>
+                        <img src="images/work4.png" style="width:60%;"><br>
+                    </div>   
+                        <br>
+                        <br>
+                    <div class="mywork1">
+                        <h1>5. Donuts Web Landing Page Interface</h1><br>
+                        <img src="images/work5.png" style="width:60%;"><br>
+                    </div> 
+                        <br>
+                        <br>
+                    <div class="mywork1">
+                        <h1>6. Samsung Watch Web Landing Page Interface</h1><br>
+                        <img src="images/work6.png" style="width:60%;"><br>
+                    </div> 
+                    <br>          
+                
+                </div>
+            </section>
+
+            <section id="appwork">     
+                <div class="tab-contents" id="app">
+                    
+                    <div class="mywork-col-1">
+                        <br>
+                        <center><h1>1. Movies/Series App Interface</h1></center><br>
+                        <center><img src="images/work7.jpg" style="width:60%;"></center> 
+                    </div>
+                        <br>
+                        <br>
+                    <div class="mywork-col-1">
+                        <center><h1>2. Music App Interface</h1></center><br>
+                        <center><img src="images/work8.png" style="width:60%;"></center><br>
+                    </div>
+
+                </div>
+            </section>  
+</section> 
+
+
+<script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+    </script>
+
+</body>
+</html>
